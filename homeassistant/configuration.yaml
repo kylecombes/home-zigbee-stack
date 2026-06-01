@@ -9,3 +9,16 @@ frontend:
 automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
+
+# Expose selected entities to Amazon Alexa as a local Philips Hue bridge.
+# Echo requires listen_port 80. host_ip/advertise_ip pinned to the Pi's LAN IP.
+emulated_hue:
+  host_ip: 192.168.1.29
+  advertise_ip: 192.168.1.29
+  listen_port: 80
+  upnp_bind_multicast: true
+  expose_by_default: false
+  entities:
+    light.0x58e6c5fffe1a99ac:
+      name: "String lights"
+      hidden: false
