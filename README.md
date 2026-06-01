@@ -25,7 +25,7 @@ Home Assistant UI: http://192.168.1.29:8123
 Home Assistant impersonates a Philips Hue bridge on the LAN. The Echo Dot discovers it via UPnP/SSDP and controls lights directly — no AWS, no internet required.
 
 **One-time setup:**
-1. Ensure the Echo Dot is on the same LAN subnet as the Pi (`192.168.1.x`).
+1. Ensure the Echo is on the **same subnet** as the Pi (`192.168.1.x`). Discovery uses SSDP multicast, which doesn't cross subnets — a guest/IoT network on a different subnet (e.g. `192.168.4.x`) will silently fail. If it ever stops working, check the Echo's network first.
 2. Say **"Alexa, discover devices"** (or Alexa app → Devices → + → Add device → Other). Wait ~45 seconds.
 3. Alexa should report finding "String lights".
 
