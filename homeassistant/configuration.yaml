@@ -10,6 +10,12 @@ automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
 
+logger:
+  default: info
+  logs:
+    habluetooth: critical
+    homeassistant.components.bluetooth: critical
+
 # Expose selected entities to Amazon Alexa as a local Philips Hue bridge.
 # Echo requires listen_port 80. host_ip/advertise_ip pinned to the Pi's LAN IP.
 emulated_hue:
