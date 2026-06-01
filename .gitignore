@@ -1,0 +1,5 @@
+.env
+mosquitto/
+zigbee2mqtt/
+homeassistant/
+
