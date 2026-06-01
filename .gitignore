@@ -1,5 +1,18 @@
 .env
 mosquitto/
 zigbee2mqtt/
-homeassistant/
+
+# Home Assistant: ignore runtime state, secrets, caches, and generated files.
+# Everything else (configuration.yaml, automations/scripts/scenes, blueprints/) is tracked.
+homeassistant/secrets.yaml
+homeassistant/.storage/
+homeassistant/.cache/
+homeassistant/.cloud/
+homeassistant/deps/
+homeassistant/tts/
+homeassistant/*.db
+homeassistant/*.db-*
+homeassistant/*.log
+homeassistant/*.log.*
+homeassistant/.ha_run.lock
 
