@@ -1,6 +1,7 @@
 .env
 mosquitto/
-zigbee2mqtt/
+zigbee2mqtt/*
+!zigbee2mqtt/external_converters/
 
 # Home Assistant: ignore runtime state, secrets, caches, and generated files.
 # Everything else (configuration.yaml, automations/scripts/scenes, blueprints/) is tracked.
